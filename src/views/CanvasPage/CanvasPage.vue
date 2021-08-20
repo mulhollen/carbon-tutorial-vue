@@ -1,11 +1,5 @@
 <template>
-  <div class="bx--grid bx--grid--full-width bx--grid--no-gutter repo-page">
-    <div class="bx--row repo-page__r1">
-      <div class="bx--col-lg-16">
-        <div id="container"></div>
-      </div>
-    </div>
-  </div>
+  <div id="container"></div>
 </template>
 
 <script>
@@ -23,9 +17,11 @@ export default {
   },
   methods: {
     init: function() {
+      let container = document.getElementById('container');
+
       this.scene = new THREE.Scene();
       this.camera = new THREE.PerspectiveCamera(
-        75,
+        70,
         window.innerWidth / window.innerHeight,
         0.1,
         1000
@@ -33,7 +29,7 @@ export default {
 
       this.renderer = new THREE.WebGLRenderer();
       this.renderer.setSize(window.innerWidth, window.innerHeight);
-      document.body.appendChild(this.renderer.domElement);
+      container.appendChild(this.renderer.domElement);
 
       const geometry = new THREE.BoxGeometry(1, 1, 1);
       const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
@@ -59,3 +55,14 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+#container {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+</style>
