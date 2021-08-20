@@ -15,7 +15,9 @@
     "@carbon/vue": "^2.37.1",
     "carbon-components": "^10.33.0",
     "core-js": "^3.11.0",
+    "firebase": "^8.10.0",
     "mock-apollo-client": "^1.1.0",
+    "three": "^0.131.3",
     "vue": "^2.6.12",
     "vue-apollo": "^3.0.0-beta.11",
     "vue-router": "^3.5.1"

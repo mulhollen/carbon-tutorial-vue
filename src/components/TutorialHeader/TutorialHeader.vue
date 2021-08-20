@@ -8,6 +8,7 @@
 
     <cv-header-nav>
       <cv-header-menu-item to="/repos">Repositories</cv-header-menu-item>
+      <cv-header-menu-item to="/canvas">Canvas</cv-header-menu-item>
     </cv-header-nav>
 
     <template slot="header-global">
